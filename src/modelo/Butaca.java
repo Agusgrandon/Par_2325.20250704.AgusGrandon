@@ -1,13 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
+import java.io.Serializable;
 
 /**
  *
- * @author NISSI
+ * @author agus
  */
-public class Butaca {
+public class Butaca implements Serializable{
+    private int numero;
+    private int fila;
+    private boolean estado;
+
+    public Butaca(int numero, int fila, boolean estado) {
+        this.numero = numero;
+        this.fila = fila;
+        this.estado = estado;
+    }
+    
+    public boolean estaOcupada(){
+        return estado;
+    }
+    
+    public void SetOcupada(boolean estado){
+        this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return "Butaca{" + "numero=" + numero + ", fila=" + fila + ", estado=" + estado + '}';
+    }
+    
     
 }
