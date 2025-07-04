@@ -1,4 +1,5 @@
 package modelo;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,7 +7,7 @@ import java.util.List;
  *
  * @author agus
  */
-public class Cliente {
+public class Cliente implements Serializable{
     private String nombre;
     private String email;
     private String contraseña;

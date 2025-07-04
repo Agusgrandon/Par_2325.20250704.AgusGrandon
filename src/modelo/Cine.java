@@ -48,7 +48,7 @@ public class Cine implements Serializable{
             resultado = "No compraste ninguna entrada";
         } else {
             for(Entrada entrada : lista){
-                resultado += entrada.toString(); + "\n";
+                resultado += entrada.toString() + "\n";
             }
         }
         return resultado;
