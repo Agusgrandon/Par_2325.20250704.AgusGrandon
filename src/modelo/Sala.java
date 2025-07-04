@@ -16,8 +16,8 @@ public class Sala implements Serializable{
         this.pelicula = pelicula;
         this.butacas = new Butaca[6][4];
         //inicio la matriz
-        for( int i = 0; i <10; i++){
-            for( int j = 0; j <10; j++){
+        for( int i = 0; i <6; i++){
+            for( int j = 0; j <4; j++){
                 butacas[i][j] = new Butaca(i, j, false);
             }
         }
