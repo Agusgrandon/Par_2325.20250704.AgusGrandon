@@ -53,4 +53,8 @@ public class Cine implements Serializable{
         }
         return resultado;
     }
+
+    public void registrarCliente(Cliente cliente, String usuario) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

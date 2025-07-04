@@ -9,10 +9,10 @@ import modelo.Entrada;
 import modelo.Sala;
 
 public class PersistenciaDatos {
-private static final String ARCHIVO = "clientes.ser";
+private static final String LISTACINE = "clientes.ser";
     
     public static void guardar(Cine cine) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(ARCHIVO))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(LISTACINE))) {
             oos.writeObject(cine);
         } catch (IOException ioe) {            
             System.out.println("Error guardando cine: " + ioe.getMessage());
@@ -20,7 +20,7 @@ private static final String ARCHIVO = "clientes.ser";
     }
     
     public static Cine cargar(){
-        File archivo = new File(ARCHIVO);
+        File archivo = new File(LISTACINE);
         if (!archivo.exists()) {
             HashMap<String, Cliente> clientes = new HashMap<>();
             List<Sala> salas = new ArrayList<>();
@@ -32,7 +32,7 @@ private static final String ARCHIVO = "clientes.ser";
             return cine;
         }
         
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ARCHIVO))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(LISTACINE))) {
            return (Cine) ois.readObject();
         } catch (IOException | ClassNotFoundException ioe) {
             System.out.println("Error cargando el cine: " + ioe.getMessage());

@@ -1,17 +1,22 @@
 package controlador;
 
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import modelo.Cine;
 import modelo.Cliente;
+import modelo.Entrada;
 import modelo.Sala;
 
 /**
  *
  * @author agus
  */
-public class CompraView {
+public class CompraView extends VBox{
     public CompraView(Stage stage, Cine cine, Sala sala, Cliente cliente) {
         Label lbl = new Label("Sala: " + sala.getNumero());
         Label lbl2 = new Label();

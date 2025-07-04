@@ -1,9 +1,10 @@
 package parcialagus;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import modelo.Cine;
+import persistencia.PersistenciaDatos;
+import vista.LoginView;
 
 /**
  *
@@ -18,16 +19,16 @@ public class ParcialAgus extends Application{
     
     @Override
     public void start(Stage stage) throws Exception{
-       Button btn = new Button("Click");
-       StackPane layout = new StackPane(btn);
-       Scene scene = new Scene(layout, 300, 400);
-       stage.setScene(scene);
-       stage.setTitle("JavaFX");
-       btn.setOnAction( eh -> {
-           //Programacion de la reacción al evento
-           System.out.println("Se registro un clic!");
-       });
-       stage.show();
+        Cine cine = PersistenciaDatos.cargar();
+        
+        LoginView loguearse = new LoginView(stage, cine);
+        stage.setScene(new Scene(loguearse));
+        stage.setTitle("Cines Hoyts");
+        stage.setWidth(400);
+        stage.setHeight(400);
+        //guardo el archivo
+        stage.setOnCloseRequest(eh -> PersistenciaDatos.guardar(cine));
+        stage.show();
     }
     
 }
