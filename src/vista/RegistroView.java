@@ -1,13 +1,22 @@
 
 package vista;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import modelo.Cine;
+import modelo.Cliente;
 
 /**
  *
  * @author agus
  */
 public class RegistroView extends VBox{
-    public RegistrarView(Stage stage, Cine cine) {
+    public RegistroView(Stage stage, Cine cine) {
             Label lblUser = new Label("Usuario");
             TextField campoUsuario = new TextField();
             Label lblNombre = new Label("Nombre");
