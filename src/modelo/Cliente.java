@@ -1,4 +1,5 @@
 package modelo;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,19 +16,22 @@ public class Cliente {
         this.nombre = nombre;
         this.email = email;
         this.contraseña = contraseña;
+        this.listaEntradas = new ArrayList<>();
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public List<Entrada> getListaEntradas() {
+        return listaEntradas;
     }
     
+    public boolean validarContraseña(String contraseña){
+        return this.contraseña.equals(contraseña);
+    }
     
+    public void agregarEntrada(Entrada entrada){
+        listaEntradas.add(entrada);
+    } 
 }

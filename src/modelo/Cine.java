@@ -41,6 +41,16 @@ public class Cine implements Serializable{
     }
     
     public String entradasString(Cliente cliente){
-    
+        List<Entrada> lista = cliente.getListaEntradas();
+        String resultado = "";
+        
+        if(lista.isEmpty()){
+            resultado = "No compraste ninguna entrada";
+        } else {
+            for(Entrada entrada : lista){
+                resultado += entrada.toString(); + "\n";
+            }
+        }
+        return resultado;
     }
 }
