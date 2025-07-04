@@ -31,13 +31,13 @@ public class Cine implements Serializable{
         return clientes;
     }
     
-    public void registrarClientes(Cliente cliente, String usuario){
-        clientes.put(usuario, cliente);
-    }
-    
     public void agregarEntrada(Entrada entrada){
         entradas.add(entrada);
         entrada.getCliente().agregarEntrada(entrada);
+    }
+    
+    public void registrarCliente(Cliente cliente, String usuario){
+        clientes.put(usuario, cliente);
     }
     
     public String entradasString(Cliente cliente){
@@ -52,9 +52,5 @@ public class Cine implements Serializable{
             }
         }
         return resultado;
-    }
-
-    public void registrarCliente(Cliente cliente, String usuario) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
