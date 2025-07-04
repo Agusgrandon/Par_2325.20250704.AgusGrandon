@@ -56,7 +56,7 @@ public class Sala implements Serializable{
 
     @Override
     public String toString() {
-        return "Sala{" + "numero=" + numero + ", pelicula=" + pelicula + ", butacas=" + butacas + '}';
+        return "Pelicula: " + getPelicula();
     }
     
     

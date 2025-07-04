@@ -24,8 +24,8 @@ public class ParcialAgus extends Application{
         LoginView loguearse = new LoginView(stage, cine);
         stage.setScene(new Scene(loguearse));
         stage.setTitle("Cines Hoyts");
-        stage.setWidth(400);
-        stage.setHeight(400);
+        stage.setWidth(700);
+        stage.setHeight(500);
         //guardo el archivo
         stage.setOnCloseRequest(eh -> PersistenciaDatos.guardar(cine));
         stage.show();

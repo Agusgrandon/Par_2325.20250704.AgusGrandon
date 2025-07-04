@@ -47,7 +47,7 @@ public class MenuView extends VBox{
         });
         
         btnEntradas.setOnAction( e -> {
-            Alert alerta = new Alert(Alert.AlertType.INFORMATION, ("Mis entradas: \n " + cine.entradasString(cliente)));
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION, (cine.entradasString(cliente)));
             alerta.showAndWait();
         });
         

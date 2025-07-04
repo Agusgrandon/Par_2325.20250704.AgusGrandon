@@ -22,7 +22,7 @@ public class Entrada implements Serializable{
 
     @Override
     public String toString() {
-        return "Entrada{" + "cliente=" + cliente + ", sala=" + sala + ", butaca=" + butaca + '}';
+        return "Tu entrada: " + sala.toString() + butaca.toString();
     }
     
     

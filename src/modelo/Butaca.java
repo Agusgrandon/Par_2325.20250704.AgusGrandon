@@ -19,6 +19,10 @@ public class Butaca implements Serializable{
     public boolean estaOcupada(){
         return estado;
     }
+
+    public int getNumero() {
+        return numero;
+    }
     
     public void SetOcupada(boolean estado){
         this.estado = estado;
@@ -26,7 +30,7 @@ public class Butaca implements Serializable{
 
     @Override
     public String toString() {
-        return "Butaca{" + "numero=" + numero + ", fila=" + fila + ", estado=" + estado + '}';
+        return "Butaca: " + getNumero();
     }
     
     
