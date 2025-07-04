@@ -4,10 +4,17 @@
  */
 package controlador;
 
+import javafx.stage.Stage;
+import modelo.Cine;
+import modelo.Cliente;
+
 /**
  *
  * @author NISSI
  */
 public class MenuView {
+
+    public MenuView(Stage stage, Cine cine, Cliente cliente) {
+    }
     
 }
